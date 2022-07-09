@@ -1,8 +1,22 @@
 const express = require('express');
 const homeRoutes = require('./routes/homeRoutes');
 const path = require("path");
+const flash = require('connect-flash');
+const session = require('express-session');
 
 const app = express();
+
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(flash());
+
+app.use((req,res,next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    next();
+})
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));

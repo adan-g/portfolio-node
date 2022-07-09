@@ -32,5 +32,6 @@ exports.sendEmail = async (req, res) => {
         html: contentHTML,
     });
 
-    res.send('Message sent');
+    req.flash('success_msg', 'Message sent')
+    res.redirect('/#contact');
 }
