@@ -1,0 +1,28 @@
+.div-img{
+    margin-bottom: 110px;
+}
+
+.btn-enlace {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    position: relative;
+}
+
+
+.btn-enlace:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 0.5px solid #4CAF50;
+}
+
+.btn-enlace {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
