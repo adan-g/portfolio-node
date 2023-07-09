@@ -3,8 +3,11 @@ const homeRoutes = require('./routes/homeRoutes');
 const path = require("path");
 const flash = require('connect-flash');
 const session = require('express-session');
+const dotenv = require('dotenv');
 
 const app = express();
+
+dotenv.config();
 
 app.use(session({
     secret: 'secret',

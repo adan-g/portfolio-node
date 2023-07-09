@@ -12,12 +12,12 @@ exports.sendEmail = async (req, res) => {
 
    
     let transporter = nodemailer.createTransport({
-        host: 'server170.web-hosting.com',
-        port: 465,
-        secure: true,
+        host: process.env.EMAIL_HOST,
+        port: process.EMAIL_PORT,
+        secure: false,
         auth: {
-        user: 'info@adangimenez.com',
-        pass: '3LS%a;aO.dsF',
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
         },
         tls: {
             rejectUnauthorized: false
